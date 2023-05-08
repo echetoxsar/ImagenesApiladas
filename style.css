@@ -6,12 +6,12 @@ body{
     font-family: sans-serif;
     display: flex;
     background-image: url(img/sol.png);
-    background-size: cover ;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
     background-position: center;
 }
-#contenedor-imagenes{
+.contenedor-imagenes{
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -21,21 +21,21 @@ body{
     justify-content: space-between;
 }
 
-#contenedor-imagenes .imagen{
+.contenedor-imagenes .imagen{
     display: flex;
     flex-direction:column;
     align-items: center;
 }
 
-#contenedor-imagenes .imagen img{
+.contenedor-imagenes .imagen img{
     height: 50px;
     display: flex;
     transition: transform 0.7s ease-in-out;
 }
-#contenedor-imagenes .imagen:hover img{
+.contenedor-imagenes .imagen:hover img{
     transform: translateY(-15px);
 }
-#contenedor-imagenes .imagen .nombre{
+.contenedor-imagenes .imagen .nombre{
     background-color: rgb(255, 255, 0, 0.2);
     padding: 5px;
     margin-top: -70px;
@@ -43,19 +43,19 @@ body{
     display: none;
 
 }
-#contenedor-imagenes .imagen:hover .nombre{
+.contenedor-imagenes .imagen:hover .nombre{
     display: inline-block;
     position: absolute;
 }
-#contenedor-imagenes .imagen .nombre::before{
+.contenedor-imagenes .imagen .nombre::before{
     content: "";
     position: absolute;
     border-top: solid 10px rgb(0255, 255, 0, 0.2);
     border-left: solid 10px transparent;
     border-right: solid 10px transparent;
     border-bottom: solid 10px transparent;
-    width: px;
+    width: 1px;
     height: 1px;
-    top: 28.5px ;
+    top: 28.5px;
     left: 34%;
 }
