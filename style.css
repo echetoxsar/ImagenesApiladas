@@ -1,31 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
-    background-image: url(img/sol.png);
-    background-size: 100% 100% ;
-    background-attachment:fixed;
     font-family: sans-serif;
     display: flex;
-    align-items: center;
-    justify-content:space-around;
+    background-image: url(img/sol.png);
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: center;
 }
-.contenedor-imagenes{
+#contenedor-imagenes{
     position: relative;
-    justify-content:space-around;
-    align-content: center;
-    margin: 300px auto;
+    height: 100vh;
+    width: 100vw;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.contenedor-imagenes .imagen{
-    position:relative;
-    display: inline-flex;
-    flex-direction: column;
+
+#contenedor-imagenes .imagen{
+    display: flex;
+    flex-direction:column;
     align-items: center;
 }
-.contenedor-imagenes .imagen img{
-    height: 80px;
+
+#contenedor-imagenes .imagen img{
+    height: 50px;
+    display: flex;
+    transition: transform 0.7s ease-in-out;
 }
-.contenedor-imagenes .imagen .nombre{
-    margin-top: -140px;
-    padding: 10px 10px 10px 10px;
-    color: #fff;
-    background-color: rgb(255, 255, 0, 0.1);
-    border-radius: 8px;
+#contenedor-imagenes .imagen:hover img{
+    transform: translateY(-15px);
+}
+#contenedor-imagenes .imagen .nombre{
+    background-color: rgb(255, 255, 0, 0.2);
+    padding: 5px;
+    margin-top: -70px;
+    border-radius: 10px;
+    display: none;
+
+}
+#contenedor-imagenes .imagen:hover .nombre{
+    display: inline-block;
+    position: absolute;
+}
+#contenedor-imagenes .imagen .nombre::before{
+    content: "";
+    position: absolute;
+    border-top: solid 10px rgb(0255, 255, 0, 0.2);
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    border-bottom: solid 10px transparent;
+    width: px;
+    height: 1px;
+    top: 28.5px ;
+    left: 34%;
 }
